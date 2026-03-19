@@ -112,7 +112,13 @@ def adaptive_range_finder(A, tol=1e-6, r=10, max_rank=None):
         # Add a new Gaussian sample to maintain the pool
         omega_new = rng.standard_normal((n, 1))
         y_new = A @ omega_new
+        # Add to sample pool
         Y = np.hstack([Y, y_new])
+
+        # Cap pool to prevent unbounded growth (Fix 1: memory leak)
+        MAX_POOL = r + max_rank
+        if Y.shape[1] > MAX_POOL:
+            Y = Y[:, -MAX_POOL:]
     
     return Q
 

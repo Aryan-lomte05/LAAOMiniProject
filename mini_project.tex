@@ -1,0 +1,277 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[top=1in,bottom=1in,left=1.1in,right=1.1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{xcolor}
+
+\definecolor{deepblue}{RGB}{0,51,102}
+
+% ---- section style (no titlesec needed) ----
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{\z@}
+  {-2.5ex plus -1ex minus -.2ex}{1.2ex plus .2ex}
+  {\large\bfseries\color{deepblue}}}
+\makeatother
+
+\pagestyle{plain}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ---- TITLE ----
+\begin{center}
+  {\small Department of Computer Engineering \quad|\quad
+   Pune Institute of Computer Technology (PICT)}\\[0.4em]
+  \noindent\rule{\linewidth}{1pt}\\[0.5em]
+  {\Large\bfseries\color{deepblue}Mini Project 2 --- Initial Project Report}\\[0.3em]
+  {\normalsize\bfseries LAO Laboratory \quad|\quad Academic Year 2025--26}\\[0.3em]
+  \noindent\rule{\linewidth}{1pt}\\[0.8em]
+\end{center}
+
+% ---- TEAM TABLE ----
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Name} & \textbf{Roll Number} & \textbf{Responsibility} \\
+\midrule
+Naman Lodha     & 16015024039 & SRFT, Interpolative Decomp., CUR \\
+Aditya Lokhande & 16015024040 & Experiments, Visualizations, Error Analysis \\
+Aryan Lomte     & 16015024041 & Core Randomized SVD (Stage A \& B) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{Division:} A \quad \textbf{Batch:} A2 \quad
+\textbf{Submission Date:} March 19, 2026
+\end{center}
+
+\noindent\rule{\linewidth}{0.6pt}
+
+% ============================================================
+\section{Project Title}
+% ============================================================
+
+\begin{center}
+\large\textbf{Finding Structure with Randomness: Probabilistic Algorithms for
+Constructing Approximate Matrix Decompositions}
+\end{center}
+
+\noindent\textit{Based on}: N. Halko, P.\,G. Martinsson, J.\,A. Tropp,
+arXiv:0909.4061v2 [math.NA], 2010. (SIAM Review 53(2):217--288, 2011.)
+
+% ============================================================
+\section{Project Description}
+% ============================================================
+
+Classical matrix decompositions --- particularly the Singular Value Decomposition (SVD)
+and QR factorization --- are fundamental to data analysis and scientific computing. For
+large-scale matrices, the $\mathcal{O}(mn\min(m,n))$ cost of classical SVD becomes
+prohibitive. This project implements and experimentally validates the
+\textbf{randomized two-stage framework} for low-rank matrix approximation proposed by
+Halko, Martinsson, and Tropp (2009).
+
+The core idea is to replace expensive deterministic operations with random sampling:
+a random test matrix $\Omega \in \mathbb{R}^{n \times l}$ computes a sketch $Y = A\Omega$
+whose column space approximates the dominant subspace of $A$. After orthonormalization,
+this basis $Q$ is used in a cheap deterministic Stage B to produce approximate SVDs at
+a fraction of the classical cost. The method is underpinned by rigorous probabilistic
+error bounds and beats classical algorithms in speed, robustness, and suitability for
+parallel architectures.
+
+% ============================================================
+\section{Concept Used}
+% ============================================================
+
+\begin{itemize}[leftmargin=1.8em,itemsep=2pt]
+  \item \textbf{Randomized Singular Value Decomposition (Randomized SVD)}
+  \item \textbf{QR Factorization} --- stabilized Gram--Schmidt orthonormalization
+  \item \textbf{Power / Subspace Iteration} --- improves accuracy for slowly-decaying spectra (Alg.~4.4)
+  \item \textbf{Subsampled Randomized Fourier Transform (SRFT)} --- $\mathcal{O}(mn\log k)$ range finder (Alg.~4.5)
+  \item \textbf{Interpolative Decomposition (ID)} --- column-subset low-rank representation (Sec.~5.2)
+  \item \textbf{CUR Decomposition} --- row and column submatrix factorization (Sec.~2.1.4)
+  \item \textbf{Johnson--Lindenstrauss Lemma \& Measure Concentration} --- theoretical error analysis
+  \item \textbf{Principal Component Analysis (PCA)} --- application of randomized SVD
+\end{itemize}
+
+The central identity exploited is:
+\[
+A \;\approx\; Q\,Q^\top A, \qquad Q \in \mathbb{R}^{m \times l},\quad
+Q^\top Q = I_l,\quad l = k + p,
+\]
+where $k$ is the target rank and $p \geq 0$ is the oversampling parameter.
+
+% ============================================================
+\section{Application Area}
+% ============================================================
+
+\begin{enumerate}[leftmargin=1.8em,itemsep=3pt]
+  \item \textbf{Image Compression} --- truncated randomized SVD for image reconstruction
+    at varying compression ratios
+  \item \textbf{Dimensionality Reduction / PCA} --- fast approximate PCA on large datasets
+  \item \textbf{Recommendation Systems} --- low-rank approximation of user--item matrices
+  \item \textbf{Large-Scale Numerical Linear Algebra} --- pass-efficient algorithms
+    for out-of-core matrices
+\end{enumerate}
+
+% ============================================================
+\section{Expected Outcome}
+% ============================================================
+
+\textbf{What will be implemented in code:}
+\begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
+  \item \textbf{Algorithm 4.1}: Basic Randomized Range Finder (Gaussian test matrix)
+  \item \textbf{Algorithm 4.2}: Adaptive Range Finder (unknown rank, fixed-precision)
+  \item \textbf{Algorithm 4.4}: Stabilized Power Iteration Range Finder ($q$ steps)
+  \item \textbf{Algorithm 4.5}: SRFT-Based Fast Range Finder ($\mathcal{O}(mn\log l)$ cost)
+  \item \textbf{Algorithm 5.1}: Direct SVD from basis $Q$ (Stage B)
+  \item \textbf{Section 5.2}: Randomized Interpolative Decomposition
+  \item \textbf{Section 2.1.4}: CUR Decomposition
+\end{enumerate}
+
+\textbf{Expected experimental results:}
+\begin{enumerate}[leftmargin=1.8em,itemsep=3pt]
+  \item Randomized SVD matches classical SVD accuracy:
+    $\|A - \tilde{A}\|_F / \|A\|_F \approx 10^{-3}$ on well-conditioned matrices.
+  \item $3$--$11\times$ wall-time speedup over \texttt{scipy.linalg.svd} at $m \geq 800$.
+  \item \textbf{Theorem 1.1}: Empirical error converges to $\sigma_{k+1}$ as oversampling
+    $p$ increases from 0 to 50.
+  \item \textbf{Theorem 1.2}: Power iteration $q=2$ reduces error by $>10\times$ over $q=0$
+    on flat-spectrum matrices.
+  \item SRFT achieves near-identical accuracy to Gaussian with lower asymptotic cost.
+  \item Image compression curves: compression ratio vs.\ reconstruction error at
+    $k \in \{5, 20, 50, 100\}$.
+\end{enumerate}
+
+% ============================================================
+\section{Dataset Used}
+% ============================================================
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Dataset} & \textbf{Source} & \textbf{Purpose} \\
+\midrule
+Synthetic low-rank matrices & Generated in-code (NumPy) & Benchmarking \& theorem verification \\
+Synthetic image ($256{\times}256$) & Generated in-code (NumPy) & Image compression demo \\
+MNIST (optional extension) & Kaggle (URL: kaggle.com/datasets/hojjatk/mnist-dataset) & Real-data PCA validation \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Synthetic matrices are constructed as
+$A = U\,\mathrm{diag}(\sigma_1,\ldots,\sigma_r)\,V^\top + \eta E$,
+where $\sigma_j = j^{-\alpha}$ controls spectral decay. No external data download
+is required for the core experiments.
+
+% ============================================================
+\section{Tools and Libraries}
+% ============================================================
+
+\begin{center}
+\begin{tabular}{>{\bfseries}ll}
+\toprule
+Library & Purpose \\
+\midrule
+NumPy & Matrix operations, random generation, linear algebra \\
+SciPy (\texttt{linalg}, \texttt{fft}) & QR decomposition, SVD, FFT for SRFT \\
+Matplotlib & Visualization, benchmark dashboards, experiment plots \\
+\texttt{time} / \texttt{timeit} & Accurate wall-clock benchmarking \\
+Python 3.12 & Implementation language \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ============================================================
+\section{Tentative Algorithm / Methodology}
+% ============================================================
+
+\textbf{Stage A: Randomized Range Finder (Algorithm 4.4)}
+\begin{enumerate}[leftmargin=1.8em,itemsep=3pt]
+  \item Draw $\Omega \in \mathbb{R}^{n \times l}$ with i.i.d.\ $\mathcal{N}(0,1)$ entries,
+    $l = k + p$.
+  \item Compute $Y = A\Omega \in \mathbb{R}^{m \times l}$.
+  \item Apply $q$ steps of power iteration with QR stabilization:
+    \[
+    Y \;\leftarrow\; A\;\mathrm{qr}(A^\top\;\mathrm{qr}(Y)).
+    \]
+  \item Orthonormalize: $(Q, \_) = \mathrm{QR}(Y)$.
+    Return $Q \in \mathbb{R}^{m \times l}$ with $A \approx QQ^\top A$.
+\end{enumerate}
+
+\textbf{Stage B: Direct SVD (Algorithm 5.1)}
+\begin{enumerate}[leftmargin=1.8em,itemsep=3pt]
+  \item Form $B = Q^\top A \in \mathbb{R}^{l \times n}$ (small matrix, $l \ll m$).
+  \item Compute SVD: $B = \hat{U}\,\Sigma\,V^\top$.
+  \item Set $U = Q\hat{U}$.
+  \item Return truncated SVD: $U_k, \Sigma_k, V_k^\top$
+\end{enumerate}
+
+\textbf{SRFT Acceleration (Algorithm 4.5)}: Replace Gaussian $\Omega$ with
+$\Omega = \sqrt{n/l}\,R\,F\,D$ (random sign flip $D$, FFT $F$, column subsample $R$).
+Cost: $\mathcal{O}(mn\log l)$ vs.\ $\mathcal{O}(mnl)$.
+
+\textbf{Experimental Validation Plan (5 Experiments):}
+\begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
+  \item \textbf{Image Compression}: Ranks $k \in \{5,20,50,100\}$; measure
+    $\|A-\tilde{A}\|_F/\|A\|_F$.
+  \item \textbf{Oversampling Effect}: Plot error vs.\ $p \in [0,50]$; verify Theorem~1.1.
+  \item \textbf{Power Iteration}: Error vs.\ $q \in \{0,1,2,3\}$ for three decay rates;
+    verify Theorem~1.2.
+  \item \textbf{PCA}: Explained variance comparison, classical vs.\ randomized.
+  \item \textbf{Benchmark Dashboard}: Time, error, speedup vs.\ $m \in \{200,\ldots,1200\}$.
+\end{enumerate}
+
+% ============================================================
+\section{Team Members with Name \& Roll Numbers}
+% ============================================================
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Name} & \textbf{Roll No.} & \textbf{Module File} & \textbf{Responsibility} \\
+\midrule
+Naman Lodha     & 16015024039 & \texttt{srft\_and\_decompositions.py}     & Alg.~4.5, ID (Sec.~5.2), CUR (Sec.~2.1.4) \\
+Aditya Lokhande & 16015024040 & \texttt{experiments\_and\_applications.py} & All 5 experiments, plots \\
+Aryan Lomte     & 16015024041 & \texttt{randomized\_svd\_core.py}          & Alg.~4.1, 4.2, 4.4, 5.1, benchmarking \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ============================================================
+\section{Division / Batch}
+% ============================================================
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Field} & \textbf{Detail} \\
+\midrule
+Department      & Computer Science and Business Systems \\
+Division        & A \\
+Batch           & A2 \\
+Subject         & Linear Algebra and Optimization (LAO) \\
+Academic Year   & 2025--26 \\
+Submission Date & March 19, 2026 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{1.5em}
+\noindent\rule{\linewidth}{0.6pt}
+\vspace{0.3em}
+
+\noindent\small\textit{%
+\textbf{Reference}: N. Halko, P.\,G. Martinsson, J.\,A. Tropp,
+``Finding Structure with Randomness: Probabilistic Algorithms for Constructing
+Approximate Matrix Decompositions,''
+SIAM Review 53(2):217--288, 2011.
+\texttt{arXiv:0909.4061v2}.
+}
+
+\end{document}

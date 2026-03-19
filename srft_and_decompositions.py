@@ -37,12 +37,13 @@ def srft_range_finder(A, l):
     signs = rng.choice([-1.0, 1.0], size=n)
     AD = A * signs[np.newaxis, :]        # A * D  (broadcast)
 
-    # F: Apply FFT along axis=1 (columns)
-    AF = np.real(fft(AD, axis=1)) / np.sqrt(n)
+    # 3. Apply FFT (magnitude-preserved)
+    AF_complex = fft(AD, axis=1) / np.sqrt(n)
 
-    # R: Randomly select l rows (columns of Omega = rows of Omega^T)
+    # 4. Subsample l columns and project to real (Fix 2: FFT precision)
     idx = rng.choice(n, size=l, replace=False)
-    Y = np.sqrt(n / l) * AF[:, idx]     # m x l sample matrix
+    Y = np.sqrt(n / l) * np.real(AF_complex[:, idx])
+     # m x l sample matrix
 
     # Step 3: Orthonormalize
     Q, _ = qr(Y, mode='economic')
