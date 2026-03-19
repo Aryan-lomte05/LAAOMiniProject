@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}Project Title}{2}{}%
+\contentsline {section}{\numberline {2}Project Description}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Background and Motivation}{2}{}%
+\contentsline {subsection}{\numberline {2.2}The Randomized Solution}{2}{}%
+\contentsline {subsection}{\numberline {2.3}Our Implementation Scope}{3}{}%
+\contentsline {section}{\numberline {3}Concept Used}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Primary Mathematical Concepts}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Key Mathematical Framework}{4}{}%
+\contentsline {section}{\numberline {4}Application Area}{4}{}%
+\contentsline {section}{\numberline {5}Expected Outcome}{5}{}%
+\contentsline {subsection}{\numberline {5.1}Implementation Deliverables}{5}{}%
+\contentsline {subsection}{\numberline {5.2}Expected Experimental Results}{5}{}%
+\contentsline {section}{\numberline {6}Dataset Used}{6}{}%
+\contentsline {subsection}{\numberline {6.1}Primary Datasets (Synthetic, Generated In-Code)}{6}{}%
+\contentsline {subsection}{\numberline {6.2}Optional Extension Dataset}{6}{}%
+\contentsline {section}{\numberline {7}Tools and Libraries}{6}{}%
+\contentsline {section}{\numberline {8}Tentative Algorithm / Methodology}{6}{}%
+\contentsline {subsection}{\numberline {8.1}Stage A: Randomized Range Finder (Algorithm 4.4 --- Stabilized)}{6}{}%
+\contentsline {subsection}{\numberline {8.2}Stage A: Algorithm 4.1 --- Basic Range Finder}{7}{}%
+\contentsline {subsection}{\numberline {8.3}Stage A: Algorithm 4.2 --- Adaptive Range Finder}{7}{}%
+\contentsline {subsection}{\numberline {8.4}Stage A: Algorithm 4.5 --- SRFT Fast Range Finder}{8}{}%
+\contentsline {subsection}{\numberline {8.5}Stage B: Algorithm 5.1 --- Direct SVD}{8}{}%
+\contentsline {subsection}{\numberline {8.6}Interpolative Decomposition (Section 5.2)}{8}{}%
+\contentsline {subsection}{\numberline {8.7}CUR Decomposition (Section 2.1.4)}{8}{}%
+\contentsline {section}{\numberline {9}Team Members with Name \& Roll Numbers}{9}{}%
+\contentsline {section}{\numberline {10}Division / Batch}{9}{}%
+\contentsline {section}{\numberline {11}Bug Fixes Incorporated}{9}{}%
+\contentsline {section}{\numberline {12}References}{10}{}%

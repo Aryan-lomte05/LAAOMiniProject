@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.3.19)  19 MAR 2026 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.3.19)  19 MAR 2026 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -228,6 +228,26 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 )
+(C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/graphics\graphicx
+.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/graphics\graphics
+.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/graphics-cfg\grap
+hics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
 (C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/l3backend\l3backe
 nd-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
@@ -236,20 +256,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (mini_project.aux)
 \openout1 = `mini_project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -290,77 +310,121 @@ LaTeX Font Info:    ... okay on input line 23.
 pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count284
-\scratchdimen=\dimen174
+\scratchdimen=\dimen176
 \scratchbox=\box57
 \nofMPsegments=\count285
 \nofMParguments=\count286
 \everyMPshowfont=\toks26
 \MPscratchCnt=\count287
-\MPscratchDim=\dimen175
+\MPscratchDim=\dimen177
 \MPnumerator=\count288
 \makeMPintoPDFobject=\count289
 \everyMPtoPDFconversion=\toks27
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+(C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/epstopdf-pkg\epst
+opdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/00miktex\epstopdf
+-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
 
 (C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 (C:\Users\Aryan\AppData\Local\Programs\MiKTeX Final\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-Overfull \hbox (238.6443pt too wide) in paragraph at lines 156--165
+{C:/Users/Aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(mini_project.toc)
+\tf@toc=\write3
+\openout3 = `mini_project.toc'.
+
+ [1]
+Overfull \hbox (45.37518pt too wide) in paragraph at lines 140--145
+\OT1/cmr/m/n/12 pro-duc-tion li-braries: \OT1/cmtt/m/n/12 sklearn.utils.extmath
+.randomized[]svd\OT1/cmr/m/n/12 , \OT1/cmtt/m/n/12 torch.linalg.svd[]lowrank\OT
+1/cmr/m/n/12 ,
+ []
+
+[2] [3] [4]
+Overfull \hbox (159.38359pt too wide) in paragraph at lines 273--285
  [] 
  []
 
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 182.
-[3]
-Overfull \hbox (157.92404pt too wide) in paragraph at lines 235--244
+[5]
+Overfull \hbox (53.87962pt too wide) in paragraph at lines 331--342
  [] 
  []
 
-[4] (mini_project.aux)
+
+Overfull \hbox (249.30556pt too wide) in paragraph at lines 355--362
+ [] 
+ []
+
+
+Overfull \hbox (22.01405pt too wide) in paragraph at lines 369--381
+ [] 
+ []
+
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 525--527
+[]|\OT1/cmr/m/n/12 Algorithm 4.5 (SRFT range
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--527
+\OT1/cmr/m/n/12 with leverage-score sam-pling
+ []
+
+
+Overfull \hbox (121.4024pt too wide) in paragraph at lines 520--535
+ [] 
+ []
+
+[9] [10] (mini_project.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4429 strings out of 474486
- 66701 string characters out of 5740907
- 1936542 words of memory out of 5000000
- 26678 multiletter control sequences out of 15000+600000
- 566258 words of font info for 66 fonts, out of 8000000 for 9000
+ 4810 strings out of 474486
+ 73449 string characters out of 5740907
+ 1937542 words of memory out of 5000000
+ 27039 multiletter control sequences out of 15000+600000
+ 566337 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,526b,232s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,65p,526b,327s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Aryan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/
 amsfonts/cm/cmbx12.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/font
-s/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Aryan/AppData/Local/Programs/
-MiKTeX Final/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aryan/AppData/
-Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/User
-s/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTe
-X Final/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Aryan/AppData/Local/
-Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aryan/A
-ppData/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/
-fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Aryan/AppData/Local/Program
-s/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Aryan/AppDat
-a/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mini_project.pdf (4 pages, 193027 bytes).
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aryan/AppData/Local/Programs/Mi
+KTeX Final/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Aryan/AppData/Lo
+cal/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ar
+yan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Fina
+l/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aryan/AppData/Local/Program
+s/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aryan/AppDat
+a/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/User
+s/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/amsfonts/cm/cmti
+10.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts/type1/public/a
+msfonts/cm/cmti12.pfb><C:/Users/Aryan/AppData/Local/Programs/MiKTeX Final/fonts
+/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Aryan/AppData/Local/Programs/MiK
+TeX Final/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mini_project.pdf (11 pages, 225803 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
